@@ -22,10 +22,7 @@
 		},
 
 		mounted() {
-			// 获取当前城市
-			getMenuData().then(res => {
-				console.log(res)
-			})
+			
 		}
 	}
 </script>

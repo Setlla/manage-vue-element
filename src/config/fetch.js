@@ -2,7 +2,7 @@ import {
 	baseUrl
 } from './env'
 
-export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
+export default async(url = '', data = {}, type = 'POST', method = 'fetch') => {
 	type = type.toUpperCase();
 	url = baseUrl + url;
 
@@ -20,13 +20,13 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
 
 	if (window.fetch && method == 'fetch') {
 		let requestConfig = {
-			credentials: 'include',
+//			credentials: 'include',
 			method: type,
 			headers: {
-				'Accept': 'application/json',
+//				'Accept': 'application/json',
 				'Content-Type': 'application/json'
 			},
-			mode: "no-cors",
+			mode: "cors",
 			cache: "force-cache"
 		}
 
