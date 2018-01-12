@@ -54,9 +54,10 @@
 						login(data.username, hex_md5(data.password)).then(res => {
 							if(res.islogin) {
 								self.$router.push('/allcustomer');
+								localStorage.setItem('token', res.token);
 								return
 							}
-							self.message = '用户名或密码错误';
+							self.message = res.result;
 						})					
 					} else {
 						console.log('error submit!!');
