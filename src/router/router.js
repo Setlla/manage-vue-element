@@ -19,6 +19,14 @@ export default new Router({
 				{
 					path: '/addcustomer',
 					component: resolve => require(['../components/page/AddCustomer.vue'], resolve)
+				},
+				{
+					path: '/allsite',
+					component: resolve => require(['../components/page/AllSite.vue'], resolve)
+				},
+				{
+					path: '/addsite',
+					component: resolve => require(['../components/page/AddSite.vue'], resolve)
 				}
 			]
 		},

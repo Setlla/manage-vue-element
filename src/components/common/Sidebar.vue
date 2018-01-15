@@ -45,11 +45,11 @@
                         title: '站点信息',
                         subs: [
                             {
-                                index: 'basetable',
+                                index: 'allsite',
                                 title: '全部站点'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'addsite',
                                 title: '新增站点'
                             }
                         ]
