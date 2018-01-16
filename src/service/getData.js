@@ -9,26 +9,17 @@ export const login = (username, password) => fetch('/login', {
 });
 
 /**
- * 获取站点信息
+ * 获取站点信息 站点名字  id
  */
-export const getSite = (name) => fetch('/getSite', {
-	name: name
+export const getSite = (name, id) => fetch('/getSite', {
+	name: name,
+	id: id
 });
 
 /**
- * 新增站点信息
+ * 新增和编辑站点信息
  */
-export const addSite = (siteForm) => fetch('/addSite', {
-	name: siteForm.name,
-	address: siteForm.address,
-	territory: siteForm.territory,
-	contactName: siteForm.contactName,
-	contactNickname: siteForm.contactNickname,
-	contactPhone: siteForm.contactPhone,
-	contactWechat: siteForm.contactWechat,
-	contactHometown: siteForm.contactHometown,
-	remarks: siteForm.remarks
-});
+export const addSite = (siteForm) => fetch('/addUpdateSite', siteForm);
 
 /**
  * 删除站点信息

@@ -50,7 +50,7 @@
                             },
                             {
                                 index: 'addsite',
-                                title: '新增站点'
+                                title: '编辑站点'
                             }
                         ]
                     },

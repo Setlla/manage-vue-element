@@ -27,6 +27,11 @@ export default new Router({
 				{
 					path: '/addsite',
 					component: resolve => require(['../components/page/AddSite.vue'], resolve)
+				},
+				{
+					path: '/updatesite/:id',
+					component: resolve => require(['../components/page/AddSite.vue'], resolve),
+					props: true
 				}
 			]
 		},

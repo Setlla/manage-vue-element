@@ -87,9 +87,7 @@
 				this.getData();
 			},
 			handleEdit(row) {
-				console.log(row)
-				
-//				this.$message('编辑第' + (index + 1) + '行');
+				this.$router.push('/updatesite/' + row.id);
 			},
 			handleDelete(index, row, rows) {
 				let self = this;

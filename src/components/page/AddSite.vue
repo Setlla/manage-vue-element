@@ -3,7 +3,7 @@
 		<div class="crumbs">
 			<el-breadcrumb separator="/">
 				<el-breadcrumb-item><i class="el-icon-menu"></i>站点信息</el-breadcrumb-item>
-				<el-breadcrumb-item>新增站点</el-breadcrumb-item>
+				<el-breadcrumb-item>编辑站点</el-breadcrumb-item>
 			</el-breadcrumb>
 		</div>
 		<el-form :model="siteForm" :rules="rules" ref="siteForm" label-width="100px">
@@ -35,14 +35,14 @@
 				<el-input type="textarea" v-model="siteForm.remarks"></el-input>
 			</el-form-item>
 			<el-form-item>
-				<el-button type="primary" @click="submitForm('siteForm')">立即创建</el-button>
+				<el-button type="primary" @click="submitForm('siteForm')">立即提交</el-button>
 				<el-button @click="resetForm('siteForm')">重置</el-button>
 			</el-form-item>
 		</el-form>
 	</div>
 </template>
 <script>
-	import { addSite } from '../../service/getData'
+	import { addSite, getSite } from '../../service/getData'
 
 	export default {
 		data() {
@@ -55,6 +55,7 @@
 
 			return {
 				siteForm: {
+					id: '',
 					name: '',
 					address: '',
 					territory: '',
@@ -78,14 +79,31 @@
 				}
 			};
 		},
+		created() {
+			this.fetchSite();
+		},
+		watch: {
+			// 如果路由有变化，会再次执行该方法
+			'$route': 'fetchSite'
+		},
 		methods: {
+			fetchSite() {
+				let self = this;
+				if(self.$route.params.id) {
+					getSite('', self.$route.params.id).then(res => {
+						if(res.isSuccess) {
+							self.siteForm = res.result[0]
+						}
+					})
+				}
+			},
 			submitForm(formName) {
 				let self = this;
 				self.$refs[formName].validate((valid) => {
 					if(valid) {
 						addSite(self.siteForm).then(res => {
 							if(res.isSuccess) {
-								self.$message('添加成功');
+								self.$message('操作成功');
 								self.$router.push('/allsite');
 							}
 						})
