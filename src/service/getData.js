@@ -29,6 +29,7 @@ export const delSite = (id) => fetch('/delSite', {
 });
 
 /**
+<<<<<<< Updated upstream
  * 获取公司信息 公司名字  公司编码
  */
 export const getCompany = (name, code, id) => fetch('/getCompany', {
@@ -48,3 +49,11 @@ export const addCompany = (companyForm) => fetch('/addUpdateCompany', companyFor
 export const delCompany = (id) => fetch('/delCompany', {
 	id: id
 });
+=======
+ * 获取公司信息  查询字段：名字 编码
+ */
+export const getCompany = (name, code) => fetch('/getCompany', {
+	name: name,
+	code: code
+});
+>>>>>>> Stashed changes

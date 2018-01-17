@@ -66,7 +66,8 @@
 			},
 			getData() {
 				let self = this;
-				getCompany(self.name).then(res => {
+
+				getCompany(self.name, self.code).then(res => {
 					if(res.isSuccess) {
 						self.companyData = res.result;
 						self.total = res.result.length;
