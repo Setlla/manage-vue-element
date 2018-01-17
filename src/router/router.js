@@ -36,6 +36,15 @@ export default new Router({
 				{
 					path: '/allcompany',
 					component: resolve => require(['../components/page/AllCompany.vue'], resolve)
+				},
+				{
+					path: '/addcompany',
+					component: resolve => require(['../components/page/AddCompany.vue'], resolve)
+				},
+				{
+					path: '/updatecompany/:id',
+					component: resolve => require(['../components/page/AddCompany.vue'], resolve),
+					props: true
 				}
 			]
 		},

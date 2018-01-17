@@ -21,7 +21,7 @@
 			</el-table-column>
 			<el-table-column label="操作" width="180">
 				<template scope="scope">
-					<el-button size="small" @click="handleEdit(scope.row )">编辑</el-button>
+					<el-button size="small" @click="handleEdit(scope.row)">编辑</el-button>
 					<el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row, data)">删除</el-button>
 				</template>
 			</el-table-column>
@@ -34,12 +34,12 @@
 </template>
 
 <script>
-	import { getSite, delSite } from '../../service/getData'
+	import { getCompany, delCompany } from '../../service/getData'
 
 	export default {
 		data() {
 			return {
-				siteData: [],
+				companyData: [],
 				name: '',
 				curPage: 1,
 				pageSize: 10, //每一页的数量
@@ -54,7 +54,7 @@
 					start = this.pageSize * this.curPage - 1;
 				}
 				let end = start + this.pageSize;
-				return this.siteData.slice(start, end);
+				return this.companyData.slice(start, end);
 			}
 		},
 		created() {
@@ -66,9 +66,9 @@
 			},
 			getData() {
 				let self = this;
-				getSite(self.name).then(res => {
+				getCompany(self.name).then(res => {
 					if(res.isSuccess) {
-						self.siteData = res.result;
+						self.companyData = res.result;
 						self.total = res.result.length;
 					}
 				})
@@ -77,11 +77,11 @@
 				this.getData();
 			},
 			handleEdit(row) {
-				this.$router.push('/updatesite/' + row.id);
+				this.$router.push('/updatecompany/' + row.id);
 			},
 			handleDelete(index, row, rows) {
 				let self = this;
-				delSite(row.id).then(res => {
+				delCompany(row.id).then(res => {
 					if(res.isSuccess) {
 						rows.splice(index, 1);
 						self.$message('删除成功');

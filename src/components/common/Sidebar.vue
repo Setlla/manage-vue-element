@@ -79,7 +79,7 @@
                                 title: '全部快递公司'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'addcompany',
                                 title: '新增快递公司'
                             }
                         ]
