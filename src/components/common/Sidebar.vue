@@ -75,7 +75,7 @@
                         title: '快递公司信息',
                         subs: [
                             {
-                                index: 'basetable',
+                                index: 'allcompany',
                                 title: '全部快递公司'
                             },
                             {
