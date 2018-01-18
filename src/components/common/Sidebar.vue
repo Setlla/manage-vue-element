@@ -60,11 +60,11 @@
                         title: '快递员信息',
                         subs: [
                             {
-                                index: 'basetable',
+                                index: 'allcourier',
                                 title: '全部快递员'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'addcourier',
                                 title: '新增快递员'
                             }
                         ]

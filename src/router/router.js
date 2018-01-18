@@ -45,6 +45,19 @@ export default new Router({
 					path: '/updatecompany/:id',
 					component: resolve => require(['../components/page/AddCompany.vue'], resolve),
 					props: true
+				},
+				{
+					path: '/allcourier',
+					component: resolve => require(['../components/page/AllCourier.vue'], resolve)
+				},
+				{
+					path: '/addcourier',
+					component: resolve => require(['../components/page/AddCourier.vue'], resolve)
+				},
+				{
+					path: '/updatecourier/:id',
+					component: resolve => require(['../components/page/AddCourier.vue'], resolve),
+					props: true
 				}
 			]
 		},

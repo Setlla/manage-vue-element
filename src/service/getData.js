@@ -48,3 +48,24 @@ export const addCompany = (companyForm) => fetch('/addUpdateCompany', companyFor
 export const delCompany = (id) => fetch('/delCompany', {
 	id: id
 });
+
+
+/**
+ * 获取快递员信息 公司名字  公司编码
+ */
+export const getCourier = (name, siteID) => fetch('/getCourier', {
+	name: name,
+	siteID: siteID
+});
+
+/**
+ * 新增和编辑快递员信息
+ */
+export const addCourier = (courierForm) => fetch('/addUpdateCourier', courierForm);
+
+/**
+ * 删除快递员信息
+ */
+export const delCourier = (id) => fetch('/delCourier', {
+	id: id
+});
