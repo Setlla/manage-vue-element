@@ -96,7 +96,7 @@
 			fetchCourier() {
 				let self = this;
 				if(self.$route.params.id) {
-					getCourier('', self.$route.params.id).then(res => {
+					getCourier('', '', self.$route.params.id).then(res => {
 						if(res.isSuccess) {
 							self.courierForm = res.result[0]
 						}
