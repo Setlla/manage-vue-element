@@ -3,7 +3,7 @@
 		<div class="crumbs">
 			<el-breadcrumb separator="/">
 				<el-breadcrumb-item><i class="el-icon-menu"></i>快递员信息</el-breadcrumb-item>
-				<el-breadcrumb-item>新增快递员</el-breadcrumb-item>
+				<el-breadcrumb-item>编辑快递员</el-breadcrumb-item>
 			</el-breadcrumb>
 		</div>
 		<el-form :model="courierForm" :rules="rules" ref="courierForm" label-width="100px">

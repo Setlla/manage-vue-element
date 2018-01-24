@@ -11,7 +11,7 @@
 				<el-input v-model="searchForm.name" placeholder="输入快递员姓名"></el-input>
 			</el-form-item>
 			<el-form-item prop="siteID">
-				<el-select v-model="searchForm.siteID" placeholder="请选择">
+				<el-select v-model="searchForm.siteID" placeholder="请选择站点">
 					<el-option v-for="item in siteData" :key="item.id" :label="item.name" :value="item.id">
 					</el-option>
 				</el-select>

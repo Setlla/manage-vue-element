@@ -17,7 +17,7 @@ export const getSite = (name, id) => fetch('/getSite', {
 });
 
 /**
- * 新增和编辑站点信息
+ * 编辑和编辑站点信息
  */
 export const addSite = (siteForm) => fetch('/addUpdateSite', siteForm);
 
@@ -38,7 +38,7 @@ export const getCompany = (name, code, id) => fetch('/getCompany', {
 });
 
 /**
- * 新增和编辑公司信息
+ * 编辑和编辑公司信息
  */
 export const addCompany = (companyForm) => fetch('/addUpdateCompany', companyForm);
 
@@ -60,7 +60,7 @@ export const getCourier = (name, siteID, id) => fetch('/getCourier', {
 });
 
 /**
- * 新增和编辑快递员信息
+ * 编辑和编辑快递员信息
  */
 export const addCourier = (courierForm) => fetch('/addUpdateCourier', courierForm);
 
@@ -68,5 +68,22 @@ export const addCourier = (courierForm) => fetch('/addUpdateCourier', courierFor
  * 删除快递员信息
  */
 export const delCourier = (id) => fetch('/delCourier', {
+	id: id
+});
+
+/**
+ * 获取客户信息 姓名、手机号码、所属站点、等级
+ */
+export const getCustomer = (searchForm) => fetch('/getCustomer', searchForm);
+
+/**
+ * 编辑和编辑客户信息
+ */
+export const addCustomer = (customerForm) => fetch('/addUpdateCustomer', customerForm);
+
+/**
+ * 删除客户信息
+ */
+export const delCustomer = (id) => fetch('/delCustomer', {
 	id: id
 });

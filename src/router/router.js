@@ -21,6 +21,10 @@ export default new Router({
 					component: resolve => require(['../components/page/AddCustomer.vue'], resolve)
 				},
 				{
+					path: '/updatecustomer/:id',
+					component: resolve => require(['../components/page/AddCustomer.vue'], resolve)
+				},
+				{
 					path: '/allsite',
 					component: resolve => require(['../components/page/AllSite.vue'], resolve)
 				},
