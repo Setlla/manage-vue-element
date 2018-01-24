@@ -51,11 +51,12 @@ export const delCompany = (id) => fetch('/delCompany', {
 
 
 /**
- * 获取快递员信息 公司名字  公司编码
+ * 获取快递员信息 名字   站点   id
  */
-export const getCourier = (name, siteID) => fetch('/getCourier', {
+export const getCourier = (name, siteID, id) => fetch('/getCourier', {
 	name: name,
-	siteID: siteID
+	siteID: siteID,
+	id: id
 });
 
 /**
