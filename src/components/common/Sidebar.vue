@@ -86,7 +86,7 @@
                     },
                     {
                         icon: 'el-icon-menu',
-                        index: '5',
+                        index: 'allexpress',
                         title: '全部包裹',
                     },
                 ]

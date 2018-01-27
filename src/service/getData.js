@@ -87,3 +87,8 @@ export const addCustomer = (customerForm) => fetch('/addUpdateCustomer', custome
 export const delCustomer = (id) => fetch('/delCustomer', {
 	id: id
 });
+
+/**
+ * 获取包裹信息 
+ */
+export const getExpress = (searchForm) => fetch('/getListExpressDetail', searchForm);

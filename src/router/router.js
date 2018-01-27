@@ -62,6 +62,10 @@ export default new Router({
 					path: '/updatecourier/:id',
 					component: resolve => require(['../components/page/AddCourier.vue'], resolve),
 					props: true
+				},
+				{
+					path: '/allexpress',
+					component: resolve => require(['../components/page/AllExpress.vue'], resolve)
 				}
 			]
 		},
