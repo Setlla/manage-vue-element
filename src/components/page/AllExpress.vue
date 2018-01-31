@@ -44,21 +44,7 @@
 			<el-button @click="resetForm('searchForm')">清空</el-button>
 		</el-form>
 		<el-table :data="data" border style="width: 100%" ref="multipleTable" >
-			<el-table-column prop="number" label="单号">
-			</el-table-column>
-			<el-table-column prop="receiverName" label="收件人姓名">
-			</el-table-column>
-			<el-table-column prop="customeName" label="客户姓名">
-			</el-table-column>
-			<el-table-column prop="customerMPhone" label="客户手机">
-			</el-table-column>
-			<el-table-column prop="courierName" label="快递员姓名">
-			</el-table-column>
-			<el-table-column prop="siteName" label="所属站点">
-			</el-table-column>
-			<el-table-column prop="companyName" label="快递公司">
-			</el-table-column>
-			<el-table-column prop="remarks" label="备注">
+			<el-table-column v-for="(value, key) in formHeader" :prop="key" :label="value" >
 			</el-table-column>
 		</el-table>
 		<div class="pagination">
@@ -90,7 +76,17 @@
 				courierData: [],
 				curPage: 1,
 				pageSize: 10, //每一页的数量
-				total: 0
+				total: 0,
+				formHeader: {
+					number: '单号',
+					receiverName: '收件人姓名',
+					customeName: '客户姓名',
+					customerMPhone: '客户手机',
+					courierName: '快递员姓名',
+					siteName: '所属站点',
+					companyName: '快递公司',
+					remarks: '备注'
+				}
 			}
 		},
 		computed: {
