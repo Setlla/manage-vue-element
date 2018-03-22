@@ -64,7 +64,7 @@
 </template>
 
 <script>
-	import { getSite, getCustomer, delCustomer } from '../../service/getData'
+	import { getSite, getCustomer, delCustomer, getCourier } from '../../service/getData'
 
 	export default {
 		data() {
@@ -89,7 +89,7 @@
 			data() { //分页
 				let start = 0;
 				if(this.total > this.pageSize) {
-					start = this.pageSize * this.curPage - 1;
+					start = this.pageSize * (this.curPage - 1);
 				}
 				let end = start + this.pageSize;
 				return this.customerData.slice(start, end);

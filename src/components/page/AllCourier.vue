@@ -70,7 +70,7 @@
 			data() { //分页
 				let start = 0;
 				if(this.total > this.pageSize) {
-					start = this.pageSize * this.curPage - 1;
+					start = this.pageSize * (this.curPage - 1);
 				}
 				let end = start + this.pageSize;
 				return this.courierData.slice(start, end);
@@ -103,6 +103,7 @@
 				let self = this;
 				getCourier(self.searchForm.name, self.searchForm.siteID).then(res => {
 					if(res.isSuccess) {
+						localStorage.setItem('courierData', JSON.stringify(res.result));
 						self.courierData = res.result;
 						self.total = res.result.length;
 					}
@@ -120,8 +121,10 @@
 					if(res.isSuccess) {
 						rows.splice(index, 1);
 						self.$message('删除成功');
+						self.getData();
 					}
 				})
+				
 			},
 			delAll() {
 

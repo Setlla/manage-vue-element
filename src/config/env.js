@@ -7,7 +7,7 @@
  * 
  */
 
-let baseUrl = 'http://192.168.2.7:8000'; 
+let baseUrl = 'http://120.78.76.172:8000'; 
 let routerMode = 'history';
 let imgBaseUrl;
 

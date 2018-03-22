@@ -73,6 +73,7 @@
 				let self = this;
 				getSite(self.name).then(res => {
 					if(res.isSuccess) {
+						localStorage.setItem('siteData', JSON.stringify(res.result));
 						self.siteData = res.result;
 						self.total = res.result.length;
 					}
@@ -90,6 +91,7 @@
 					if(res.isSuccess) {
 						rows.splice(index, 1);
 						self.$message('删除成功');
+						self.getData();
 					}
 				})
 			},

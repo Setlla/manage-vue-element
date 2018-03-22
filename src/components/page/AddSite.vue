@@ -36,6 +36,7 @@
 			</el-form-item>
 			<el-form-item>
 				<el-button type="primary" @click="submitForm('siteForm')">立即提交</el-button>
+				<el-button type="primary" @click="cancelForm()">取消编辑</el-button>
 				<el-button @click="resetForm('siteForm')">重置</el-button>
 			</el-form-item>
 		</el-form>
@@ -115,6 +116,9 @@
 			},
 			resetForm(formName) {
 				this.$refs[formName].resetFields();
+			},
+			cancelForm() {
+				window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
 			}
 		}
 	}

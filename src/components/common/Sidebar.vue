@@ -35,7 +35,7 @@
                             },
                             {
                                 index: 'addcustomer',
-                                title: '编辑客户'
+                                title: '新增客户'
                             }
                         ]
                     },
@@ -50,7 +50,7 @@
                             },
                             {
                                 index: 'addsite',
-                                title: '编辑站点'
+                                title: '新增站点'
                             }
                         ]
                     },
@@ -65,7 +65,7 @@
                             },
                             {
                                 index: 'addcourier',
-                                title: '编辑快递员'
+                                title: '新增快递员'
                             }
                         ]
                     },
@@ -80,7 +80,7 @@
                             },
                             {
                                 index: 'addcompany',
-                                title: '编辑快递公司'
+                                title: '新增快递公司'
                             }
                         ]
                     },

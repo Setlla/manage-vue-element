@@ -93,7 +93,7 @@
 			data() { //分页
 				let start = 0;
 				if(this.total > this.pageSize) {
-					start = this.pageSize * this.curPage - 1;
+					start = this.pageSize * (this.curPage - 1);
 				}
 				let end = start + this.pageSize;
 				return this.expressData.slice(start, end);
